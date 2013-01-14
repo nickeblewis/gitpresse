@@ -1,0 +1,22 @@
+<!doctype html>
+<head>
+  <title>Gitpresse' Test page</title>
+</head>
+<body>
+<h1>Hello World</h1>
+
+<script type="text/javascript">
+
+(function() {
+  if (document.location.hostname.indexOf('github.com') > -1) {
+
+    var loader = document.createElement('script'); loader.type = 'text/javascript'; loader.async = true;
+    loader.src = ('script/gitpresse.js');
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(loader, s);
+    
+  }
+})();
+
+</script>  
+</body>
+</html
