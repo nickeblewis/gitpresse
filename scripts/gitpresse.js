@@ -29,7 +29,7 @@ j=1,p=n.length;j<=p;j++)for(var o=n[j-1],k=0,q=o.length;k<q;k+=j)h[o.substring(k
 
 
 /*
-* Girpresse' 0.9 Alpha
+* Gitpresse' 0.9 Alpha
 * 
 * Copyright (c) James Westgate 2013
 *
