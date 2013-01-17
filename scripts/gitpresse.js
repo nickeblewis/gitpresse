@@ -15,12 +15,6 @@
 *   http://www.gnu.org/licenses/gpl.html
 */
 
-/*
-todo:
-  [ ] add type(object, string) back to extendify
-  [ ] remove deffereds, code events 
-*/
-
 window.extend=function(f){function n(a){return null===a?"null":"undefined"===typeof a?"undefined":Object.prototype.toString.call(a).toLowerCase().replace("[object ","").replace("]","")}function p(a){null!=a&&h[a].open>h[a].closed&&(e.push(">"),h[a].closed++)}function j(a,d){var b=n(a);if("array"===b)a.forEach(function(a){j(a,d)});else if("function"===b)j(a(),d);else if("object"===b)for(var c in a)a.hasOwnProperty(c)&&(b=a[c],h[c]?(p(d),e.push("<"+c),h[c].open++,j(b,c),p(c),e.push("</"+c+">"),result=
 !0):"text"===c?j(b,d):(e.push(" "+c+'="'),j(b,null),e.push('"')));else p(d),e.push(a)}delete window.extend;f=f||window;f.type=n;f.extendify=function(a){return function(d){if(arguments.length){var b=n(d);if("function"===b)d.apply(a);else if("object"===b)for(var c in b)a[c]=b[c]}}};f.namespace=function(a,d){var b=window;if("string"===typeof a)for(var c=a.split("."),m=0,e=c.length;m<e;m++)b=b[c[m]]=b[c[m]]||{},b.extend||(b.extend=f.extendify(b));else b=a;b.extend(d);return b};f.define=function(a,d){function b(){for(var b=
 0,d=c.length;b<d;b++)this.base=a,c[b].apply(this,arguments)}var c=[];1===arguments.length&&(d=a,a=null);a&&(b.prototype=new a);b.prototype.extend=f.extendify(b.prototype);b.extend=function(a){"function"===typeof a&&c.push(a)};b.extend(d);return b};f.load=function(){if(arguments.length)for(var a,d=0,b=0,c=0,f=arguments.length;c<f;c++){var e=arguments[c];if("function"===typeof e){a=e;d=c;b===d&&a(scriptFolder,scriptExt);break}if(loaded[e])b++;else{var g=document.createElement("script");g.type="text/javascript";
