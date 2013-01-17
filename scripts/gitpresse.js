@@ -44,7 +44,7 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
   //Public functions
   namespace('gitpresse.editing', function() {
    
-    this.switchbranch = function(branch, reload) {
+    this.switchBranch = function(branch, reload) {
       
     };
   });
