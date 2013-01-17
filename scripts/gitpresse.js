@@ -34,14 +34,15 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 //Extend the window namespace with the default Extendify methods 
 extend(window);
 
+//Check for jQuery
+if (type(window.$, 'undefined')) { 
+  console.log('Gitpresse\' requires jQuery 1.9.0 or newer');
+  return;
+}
+
 (function() {
   
-  //Check for jQuery
-  if (type(window.jQuery, 'undefined')) { 
-    console.log('Gitpresse\' requires jQuery 1.9.0 or newer');
-    return;
-  }
-    
+  //Public functions
   namespace('gitpresse.editing', function() {
    
     this.switchbranch = function(branch, reload) {
@@ -50,7 +51,7 @@ extend(window);
   });
   
   
-  //Modify the dom with the editing tools
+  //Startup - modify the dom with the editing tools
   $(document).ready(function() {
     
     $(window).load(function() {
