@@ -58,11 +58,13 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
       //Inject the stylesheet into the head
       
       //Define the toolbar
-      var toolbar = {div: {'class': 'gitpresse-toolbar'}};
+      var toolbar = {div: {'class': 'gitpresse-toolbar gitpresse-invisible'}};
       
       //Add the toolbar (hidden)
+      $('body').prepend(compose(toolbar));
       
       //Measure the toolbar, add margin for the toolbar and prepend to the body
+      
       
       //Boot the current branch (gh-pages)
       gitpresse.editing.switchBranch('gh-pages', false);
