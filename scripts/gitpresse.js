@@ -38,15 +38,15 @@ j=1,p=n.length;j<=p;j++)for(var o=n[j-1],k=0,q=o.length;k<q;k+=j)h[o.substring(k
 *   http://www.gnu.org/licenses/gpl.html
 */
 
+//Extend the window namespace with the default Extendify methods 
+extendify(window);
+
 //Check for jQuery
 if (type(window.jQuery, 'undefined')) { 
   console.log('Gitpresse\' requires jQuery 1.9.0 or newer');
   return;
 }
   
-//Extend the window namespace with the default Extendify methods 
-extendify(window);
-
 namespace('gitpresse.editing', function() {
  
   this.switchbranch = function(branch, reload) {
