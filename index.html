@@ -2,7 +2,6 @@
 <head>
   <title>Gitpresse' Test page</title>
   <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-  <link rel="stylesheet" type="text/css" href="styles/gitpresse.css">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 </head>
 <body>
@@ -13,10 +12,14 @@
 (function() {
   if (document.location.hostname.indexOf('github.com') > -1) {
 
+    var link = document.createElement('link'); link.type = 'text/css'; loader.rel = 'stylesheet';
+    link.href = ('styles/gitpresse.css');
     var loader = document.createElement('script'); loader.type = 'text/javascript'; loader.async = true;
     loader.src = ('scripts/gitpresse.js');
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(loader, s);
     
+    var s = document.getElementsByTagName('script')[0]; 
+    s.parentNode.insertBefore(link, s);
+    s.parentNode.insertBefore(loader, s);
   }
 })();
 
