@@ -41,6 +41,7 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 extend(window);
 
 (function() {
+  
   //Check for jQuery
   if (type(window.jQuery, 'undefined')) { 
     console.log('Gitpresse\' requires jQuery 1.9.0 or newer');
