@@ -40,37 +40,38 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 //Extend the window namespace with the default Extendify methods 
 extend(window);
 
-//Check for jQuery
-if (type(window.jQuery, 'undefined')) { 
-  console.log('Gitpresse\' requires jQuery 1.9.0 or newer');
-  return;
-}
-  
-namespace('gitpresse.editing', function() {
- 
-  this.switchbranch = function(branch, reload) {
+(function() {
+  //Check for jQuery
+  if (type(window.jQuery, 'undefined')) { 
+    console.log('Gitpresse\' requires jQuery 1.9.0 or newer');
+    return;
+  }
     
-  };
-});
-
-
-//Modify the dom with the editing tools
-$(document).ready(function() {
-  
-  $(window).load(function() {
-
-    //Inject the stylesheet into the head
-    
-    //Define the toolbar
-    var toolbar = {div: {'class': 'gitpresse-toolbar'}};
-    
-    //Add the toolbar (hidden)
-    
-    //Measure the toolbar, add margin for the toolbar and prepend to the body
-    
-    //Boot the current branch (gh-pages)
-    gitpresse.editing.switchBranch('gh-pages', false);
-  
+  namespace('gitpresse.editing', function() {
+   
+    this.switchbranch = function(branch, reload) {
+      
+    };
   });
-});
   
+  
+  //Modify the dom with the editing tools
+  $(document).ready(function() {
+    
+    $(window).load(function() {
+  
+      //Inject the stylesheet into the head
+      
+      //Define the toolbar
+      var toolbar = {div: {'class': 'gitpresse-toolbar'}};
+      
+      //Add the toolbar (hidden)
+      
+      //Measure the toolbar, add margin for the toolbar and prepend to the body
+      
+      //Boot the current branch (gh-pages)
+      gitpresse.editing.switchBranch('gh-pages', false);
+    
+    });
+  });
+})();  
