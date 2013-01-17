@@ -39,7 +39,7 @@ j=1,p=n.length;j<=p;j++)for(var o=n[j-1],k=0,q=o.length;k<q;k+=j)h[o.substring(k
 */
 
 //Extend the window namespace with the default Extendify methods 
-extendify(window);
+extend(window);
 
 //Check for jQuery
 if (type(window.jQuery, 'undefined')) { 
