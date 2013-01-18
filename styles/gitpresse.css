@@ -4,13 +4,16 @@
 	position:fixed;
 	top:0;
 	width:100%;
-	background: transparent no-repeat 20px 0;
+	background: transparent no-repeat;
 	-webkit-box-shadow: 0px 3px 4px 0px #333;
 	box-shadow: 0px 3px 4px 0px #333;
 }
 
 .gitpresse-toolbar #gitpresse-logo {
 	display:block;
+	position:absolute;
+	left:20px;
+	top:5px;
 	width: 70px;
 	height:20px;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAUCAMAAAAHtrtKAAAAM1BMVEXw8PD////////////6+vr////////y8vL////////////29vb///////8AAADv7+////8KVhBRAAAAD3RSTlPuUI9ws0Bg26B/IMcwEADk3EIeAAABhElEQVR42q2U23IjIQxEGe6gC/r/r90GTLFx8uJU9NBDtdARYsZ2+h5dfxHfMcXxp5DwfMfYYE1WP6A06z9gksqwgOnczyy+uqIb/T9UbvzKeyMsyJomgZF1x9MEWo3k6LK8+YthZ5RXTTAz59HEpUhl4gJbVyGzgkJk/daXdTErGyR2jDM5mAbaSIpNnDhTLCkA06ymuvVYKR9MRzlyElCjzhgW9ggQaNaqMySj1jbp/PStx7ovvFoEqiqBxvPsUOPZFNAoXPoYkougtalulZd1MWJDpKAOT3QKCxwAtsTmZA0dfZUFaH3rsS4GrlQMwPNWoqXVal7uvIW8v42Ian5Gsa5Lj/XlNJnIAnDPLIaTzc9JRQk4RAZbGtp00z71WHIxsKo4ExWSmc4tReNEeW6IewcVH8UXjUWXHuvtN/Xc77+3LnYSwq9FwqJRHLz1WG8Ysg69UK8/RQ796I6LuYe54e35zR8FjyHXXNf8KYZFwtjDXgx9jJE6LPJX+2mfYv4k/gGbRESvw4R4hwAAAABJRU5ErkJggg==);
