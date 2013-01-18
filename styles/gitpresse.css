@@ -3,7 +3,7 @@
 .gitpresse-toolbar {
 	position:fixed;
 	top:0;
-	width:100%;
+	right:20px;
 	background: transparent no-repeat;
 	-webkit-box-shadow: 0px 1px 2px 0px #666;
 	box-shadow: 0px 1px 2px 0px #666;
@@ -27,6 +27,12 @@
 /* Themable properties */
 
 .gitpresse-toolbar {
+	width:100px;
 	height:30px;
-	background-color:#111;
+	background-color:#555;
+	border:solid 1px #333;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
