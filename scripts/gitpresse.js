@@ -20,6 +20,8 @@ window.extend=function(f){function n(a){return null===a?"null":"undefined"===typ
 f.define=function(a,d){function b(){for(var b=0,d=c.length;b<d;b++)this.base=a,c[b].apply(this,arguments)}var c=[];1===arguments.length&&(d=a,a=null);a&&(b.prototype=new a);b.prototype.extend=f.extendify(b.prototype);b.extend=function(a){"function"===typeof a&&c.push(a)};b.extend(d);return b};f.load=function(){if(arguments.length)for(var a,d=0,b=0,c=0,f=arguments.length;c<f;c++){var e=arguments[c];if("function"===typeof e){a=e;d=c;b===d&&a(scriptFolder,scriptExt);break}if(loaded[e])b++;else{var g=
 document.createElement("script");g.type="text/javascript";g.onload=g.onreadystatechange=function(){if(g.readyState&&"complete"!==g.readyState&&"loaded"!==g.readyState)return!1;g.onload=g.onreadystatechange=null;b++;a&&b===d&&a()};g.async=!0;g.src=e;document.head.appendChild(g)}}};for(var h={},e,q="abipq bbbrdddldtemh1h2h3h4h5h6hrliolrprttdthtrul bdocoldeldfndivimginskbdmapnavpresubsupvar abbrareabasebodycitecodeformheadhtmllinkmarkmenumetarubysampspantime asideaudioembedinputlabelmeterparamsmalltabletbodytfoottheadtitlevideo buttoncanvasdialogfigurefooterheaderiframelegendobjectoptionoutputscriptselectsourcestrong addressarticlecaptioncommanddetailssection colgroupdatagriddatalistfieldsetnoscriptoptgroupprogresstextarea  blockquote eventsource".split(" "),
 k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l,l+k)]={open:0,closed:0};f.compose=function(a){e=[];j(a,null);return e.join("")}};
+
+
 /*
 * Gitpresse' 0.9 Alpha
 * 
@@ -31,41 +33,40 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 */
 
 (function() {
-  
-  //Extend the window namespace with the default Extendify methods 
-  extend(window);
-  
-  //Check for jQuery
-  if (type(window.$, 'undefined')) { 
-    console.log('Gitpresse\' requires jQuery 1.9.0 or newer');
-    return;
-  }
+	
+	//Extend the window namespace with the default Extendify methods 
+	extend(window);
+	
+	//Check for jQuery
+	if (type(window.$, 'undefined')) { 
+		console.log('Gitpresse\' requires jQuery 1.9.0 or newer');
+		return;
+	}
 
-  //Public functions
-  namespace('gitpresse.editing', function() {
-   
-    this.switchBranch = function(branch, reload) {
-      
-    };
-  });
-  
-  
-  //Startup - modify the dom with the editing tools
-  $(document).ready(function() {
-    
-    $(window).load(function() {
-  
-      //Add the toolbar (hidden), measure the height and add to the body
-      var $body = $('body');
-      $body.prepend(compose({div: {'class': 'gitpresse-toolbar gitpresse-invisible', a: {id: 'gitpresse-logo', href: '#'}}}));
-      
-      var $toolbar = $('.gitpresse-toolbar');
-      $('.gitpresse-toolbar').removeClass('gitpresse-invisible');
-      $body.css('margin-top', $toolbar.height());
-    
-      //Boot the current branch (gh-pages)
-      gitpresse.editing.switchBranch('gh-pages', false);
-  
-    });
-  });
+	//Public functions
+	namespace('gitpresse.editing', function() {
+	 
+		this.switchBranch = function(branch, reload) {
+			
+		};
+	});
+	
+	
+	//Startup - modify the dom with the editing tools
+	$(document).ready(function() {
+		
+		$(window).load(function() {
+	
+			//Add the toolbar (hidden), measure the height and add to the body
+			var $body = $('body');
+			$body.prepend(compose({div: {'class': 'gitpresse-toolbar gitpresse-invisible', a: {id: 'gitpresse-logo', href: '#'}}}));
+			
+			var $toolbar = $('.gitpresse-toolbar');
+			$('.gitpresse-toolbar').removeClass('gitpresse-invisible');
+		
+			//Boot the current branch (gh-pages)
+			gitpresse.editing.switchBranch('gh-pages', false);
+	
+		});
+	});
 })();  
