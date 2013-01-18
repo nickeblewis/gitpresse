@@ -57,7 +57,7 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
   
       //Add the toolbar (hidden), measure the height and add to the body
       var $body = $('body');
-      $body.prepend(compose({div: {'class': 'gitpresse-toolbar gitpresse-invisible', a: {id: 'gitpresse-logo'}}));
+      $body.prepend(compose({div: {'class': 'gitpresse-toolbar gitpresse-invisible', a: {id: 'gitpresse-logo', href: '#'}}}));
       
       var $toolbar = $('.gitpresse-toolbar');
       
