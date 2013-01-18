@@ -16,5 +16,6 @@
 
 .gitpresse-toolbar {
 	height:30px;
+	margin-top:-30px;
 	background-color:#ff4500;
 }
