@@ -14,9 +14,7 @@
 
     var loader = document.createElement('script'); loader.type = 'text/javascript'; loader.async = true;
     loader.src = ('scripts/gitpresse.js');
-    
-    var s = document.getElementsByTagName('script')[0]; 
-    s.parentNode.insertBefore(loader, s);
+    document.getElementsByTagName('head')[0].appendChild(loader);
   }
 })();
 
