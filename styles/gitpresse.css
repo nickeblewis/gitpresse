@@ -2,10 +2,21 @@
 
 .gitpresse-toolbar {
 	position:fixed;
-	background: transparent no-repeat 20px 0;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAdCAMAAABrETlvAAAAM1BMVEX////w8PD////////////////////6+vr////y8vL////////////29vYAAADv7+/////OGhWWAAAAD3RSTlOP7lBwf2Cgs0DbIDAQxwBBOC54AAACvklEQVR42r1W7ZLkIAiM8Vsx8P5PezSam93JZbdqL7X8yJiI3TSgznb8gt2StLE/RNHuSaJIeIQjcrklSSLJfkb/Pw6p90qGVH16ESZILj/NFYu/J9mYzEX2Sclf0xRP9ku+vCekvJPEPOIcdWQpi+RVoHq67PkF03yA23QgcFSRCUAxIDwWoc8k3YnIaCfaGPqaAKNLC4WRgaM+/cgML68QAsoiWGiKzy+ACjbxauEVjmSaKrXcfShGHaEdTRGo5oRW2CHOi5upECdhKuaq4F10BY8JxTxs5lML74hbAeuq99I6y7/XqHrWKvWcQOyLeAiAOkUriCCko+vKjSRbRj+SNLamDXgwnMGabKqKG/5oeCXF745lmH9X92YkQ4Vb2sqRC9Lr9SVednxWpUZVgA4hCShqXV+T6fEIP48WRDAbNORkKDokOhACdniEUqrucqw0RWqgclAj+M5SzzasdFZ8jjdPop6t4gWaw7E0z6c0StwvJBsCQwzeUtxMu8cMsXBfbUzQeFbQF1590k+SDBJStUrfrwfkEAdngwec6emvU4xsX+5rG9hsHWUmYRvCuWGXOake0VVnbleS7eiz4A1IpmfNMJ37Mgkff0mMYpbJwqjiLF1FprBI7yRJyu4G4OFEs2VWsVD1VReMYfhgy+IuvDegVsmU8LFP/pguSoqqb84C7RM944d6QJrC3Kak41fH96PUeDibLnbcEo9ZeG34nK7pOkpECDYT4YrkhS2TQxflXJZeS8GaZtcRkQ41oVmJEhRZ4pjjzc24odQvozAW8cs+zu+7ZTMpXQR/S1Jpua16XEkIG/ndcKR8c/OJgwcNkUTf3vHWMO+GHvvaqF1U3pM0CLmYSH7w3wpivsbSRfyDJHbgXayA+QmSjtt8zKvtSsLHIyR7HWNdilfj/AwJTriRyr8denyC5BfsD2RPlHEXccX7AAAAAElFTkSuQmCC);
-	-webkit-box-shadow: 0px 5px 5px 0px #666666;
-	box-shadow: 0px 5px 5px 0px #666666;
+	top:0;
+	width:100%;
+	background: transparent no-repeat;
+	-webkit-box-shadow: 0px 3px 4px 0px #333;
+	box-shadow: 0px 3px 4px 0px #333;
+}
+
+.gitpresse-toolbar #gitpresse-logo {
+	display:block;
+	position:absolute;
+	left:20px;
+	top:5px;
+	width: 70px;
+	height:20px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAUCAMAAAAHtrtKAAAAM1BMVEXw8PD////////////6+vr////////y8vL////////////29vb///////8AAADv7+////8KVhBRAAAAD3RSTlPuUI9ws0Bg26B/IMcwEADk3EIeAAABhElEQVR42q2U23IjIQxEGe6gC/r/r90GTLFx8uJU9NBDtdARYsZ2+h5dfxHfMcXxp5DwfMfYYE1WP6A06z9gksqwgOnczyy+uqIb/T9UbvzKeyMsyJomgZF1x9MEWo3k6LK8+YthZ5RXTTAz59HEpUhl4gJbVyGzgkJk/daXdTErGyR2jDM5mAbaSIpNnDhTLCkA06ymuvVYKR9MRzlyElCjzhgW9ggQaNaqMySj1jbp/PStx7ovvFoEqiqBxvPsUOPZFNAoXPoYkougtalulZd1MWJDpKAOT3QKCxwAtsTmZA0dfZUFaH3rsS4GrlQMwPNWoqXVal7uvIW8v42Ian5Gsa5Lj/XlNJnIAnDPLIaTzc9JRQk4RAZbGtp00z71WHIxsKo4ExWSmc4tReNEeW6IewcVH8UXjUWXHuvtN/Xc77+3LnYSwq9FwqJRHLz1WG8Ysg69UK8/RQ796I6LuYe54e35zR8FjyHXXNf8KYZFwtjDXgx9jJE6LPJX+2mfYv4k/gGbRESvw4R4hwAAAABJRU5ErkJggg==);
 }
 
 .gitpresse-invisible {
@@ -17,5 +28,5 @@
 
 .gitpresse-toolbar {
 	height:30px;
-	background-color:#ff4500;
+	background-color:#111;
 }
