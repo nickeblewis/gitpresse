@@ -2,7 +2,7 @@
 <head>
   <title>Gitpresse' Test page</title>
   <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-  <link rel="stylesheet" type="text/css" href="styles/gitpresse.css">
+  <link rel="stylesheet" type="text/css" href="styles/site.css">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 </head>
 <body>
@@ -12,11 +12,19 @@
 
 (function() {
   if (document.location.hostname.indexOf('github.com') > -1) {
+   
+    var head = document.getElementsByTagName("head")[0];
+    var link=document.createElement("link");
+      
+    link.setAttribute('rel', 'stylesheet');
+    link.setAttribute('type', 'text/css');
+    link.setAttribute('href', 'styles/gitpresse.css');
 
+    head.appendChild(link)
+      
     var loader = document.createElement('script'); loader.type = 'text/javascript'; loader.async = true;
     loader.src = ('scripts/gitpresse.js');
-    document.getElementsByTagName('head')[0].appendChild(loader);
-    
+    head.appendChild(loader);
   }
 })();
 
