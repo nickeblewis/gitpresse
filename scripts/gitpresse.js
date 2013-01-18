@@ -60,7 +60,9 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
       $body.prepend(compose({div: {'class': 'gitpresse-toolbar gitpresse-invisible', a: {id: 'gitpresse-logo', href: '#'}}}));
       
       var $toolbar = $('.gitpresse-toolbar');
-      
+
+    alert($toolbar.height());
+
       $('.gitpresse-toolbar').removeClass('gitpresse-invisible');
       $body.css('margin-top', $body.css('margin-top') + $toolbar.height());
     
