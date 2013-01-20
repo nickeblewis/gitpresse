@@ -38,6 +38,10 @@
 	border-bottom-left-radius: 5px;
 }
 
-[contenteditable]:hover, [contenteditable]:focus  {
-	outline: dashed 2px #ff0000 ; 
+[contenteditable]:hover,  {
+	outline: dotted 2px #ff0000 ; 
+}
+
+[contenteditable]:focus {
+	outline: dotted 3px #ff0000 ; 
 }
