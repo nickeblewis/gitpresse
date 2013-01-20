@@ -38,7 +38,7 @@
 	border-bottom-left-radius: 5px;
 }
 
-[contenteditable]:hover,  {
+[contenteditable]:hover  {
 	outline: dotted 2px #ff0000 ; 
 }
 
