@@ -39,9 +39,9 @@
 }
 
 [contenteditable]:hover  {
-	outline: dotted 4px rgb(255,0,0,0.8) ; 
+	outline: dotted 4px rgba(255,0,0,0.8) ; 
 }
 
 [contenteditable]:focus {
-	outline: dotted 4px rgb(255,0,0,0.8) ; 
+	outline: dotted 4px rgba(255,0,0,0.8) ; 
 }
