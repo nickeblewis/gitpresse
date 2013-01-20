@@ -1,5 +1,5 @@
 body {
-	background: #E4E4E4 url("site/bg.png");
+	background: #E4E4E4 url("../images/bg.png");
 	color: #292929;
 	color: rgba(0, 0, 0, 0.82);
 	font: normal 100% Cambria, Georgia, serif;
@@ -19,7 +19,7 @@ a:hover {
 	color: #DF3030;
 }
 #page {
-	background: url("site/rag.png") repeat-x;
+	background: url("../images/rag.png") repeat-x;
 	padding: 2em 0;
 }
 .inner {
@@ -39,7 +39,7 @@ img {
 	width: 31.875%;	/* 306px / 960px */
 }
 h1 {
-	background: url("site/logo-bg.png") no-repeat 50% 0;
+	background: url("../images/logo-bg.png") no-repeat 50% 0;
 }
 h1 a {
 	padding-top: 117px;
@@ -65,7 +65,7 @@ ul.nav {
 	width: 64.379%;
 }
 ul.nav a {
-	background: url("site/ornament.png") no-repeat 0 100%;
+	background: url("../images/ornament.png") no-repeat 0 100%;
 	font: bold 14px/1.2 "Book Antiqua", "Palatino Linotype", Georgia, serif;
 	display: block;
 	text-align: center;
@@ -92,14 +92,14 @@ ul.nav i {
 	margin-bottom: 0.25em;
 }
 .main h2 {
-	background: url("site/ornament.png") no-repeat 0 50%;
+	background: url("../images/ornament.png") no-repeat 0 50%;
 	font-size: 1.4em;
 	text-transform: lowercase;
 	text-align: center;
 	margin: 0.75em 0 1em;
 }
 .main h2 b {
-	background: url("site/bg.png");
+	background: url("../images/bg.png");
 	font-weight: normal;
 	padding: 0 1em;
 }
@@ -134,7 +134,7 @@ li#f-winter {
 	margin-right: 0;
 }
 .footer {
-	background: url("site/ornament.png") 50% 0 repeat-x;
+	background: url("../images/ornament.png") 50% 0 repeat-x;
 	font-size: 12px;
 	text-align: center;
 	padding: 40px 0 20px;
@@ -165,7 +165,7 @@ li#f-winter {
 		height: 87px;
 	}
 	ul.nav {
-		background: url("site/ornament.png") no-repeat 0 -20px;
+		background: url("../images/ornament.png") no-repeat 0 -20px;
 		border-top: none;
 		margin: 0 auto;
 		position: absolute;
