@@ -1,8 +1,7 @@
 /* ! Font Awesome 3.0 */
-@import url("http://netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css")
+@import url("http://netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css");
 
 /*! gitpresse.css v0.9 | MIT License | http://git.io/1TOgtg */
-
 .gitpresse-toolbar {
 	position:fixed;
 	top:0;
