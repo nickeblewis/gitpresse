@@ -37,3 +37,7 @@
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
+
+[contenteditable] {
+	outline: dotted 3px #ff0000 ; 
+}

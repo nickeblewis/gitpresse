@@ -66,7 +66,9 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 		
 			//Boot the current branch (gh-pages)
 			gitpresse.editing.switchBranch('gh-pages', false);
-	
+			
+			//Make element editable and draw chrome etc
+			$('[data-editable]').attr('contenteditable', 'true');
 		});
 	});
 })();  
