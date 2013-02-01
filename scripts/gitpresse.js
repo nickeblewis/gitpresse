@@ -80,9 +80,9 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 
 			//Toolbar button events
 			$toolbar.prepend(compose([
-				{a: {href:'#', id: 'gitpresse-merge', 'class': ''}}, 
-				{a: {href:'#', id: 'gitpresse-reset', 'class': ''}}, 
-				{a: {href:'#', id: 'gitpresse-exit', 'class': ''}}
+				{a: {href:'#', id: 'gitpresse-merge', 'text': 'm'}}, 
+				{a: {href:'#', id: 'gitpresse-reset', 'text': 'r'}}, 
+				{a: {href:'#', id: 'gitpresse-exit', 'text': 'e'}}
 			]));
 
 			$toolbar.find('a').click(function(e) {
@@ -100,7 +100,7 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 
 				//Exit
 				if (this.id === 'gitpresse-exit') {
-					$toolbar.
+					$toolbar.removeClass('editing');
 				}
 
 			})

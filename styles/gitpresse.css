@@ -56,6 +56,14 @@
 	background-image:none;
 }
 
+.gitpresse-toolbar a {
+	display:none;
+}
+
+.gitpresse-toolbar.editing a {
+	display:inline-block;
+}
+
 .gitpresse-invisible {
 	visibility:hidden
 }
