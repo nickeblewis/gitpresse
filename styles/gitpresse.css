@@ -74,8 +74,8 @@
 	border-bottom-left-radius: 5px;
 }
 
-[id][contenteditable]:hover, [id][contenteditable]:focus  {
-	opacity:1;
+[id][contenteditable]:hover  {
+	opacity:1.0;
 }
 
 body > * {
