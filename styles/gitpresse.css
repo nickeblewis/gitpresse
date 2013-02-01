@@ -75,7 +75,7 @@
 }
 
 [id][contenteditable]:hover  {
-	opacity:1.0;
+	opacity:1.0 !important;
 }
 
 body > * {
