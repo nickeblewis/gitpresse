@@ -48,6 +48,8 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 	 
 		this.switchBranch = function(branch, reload) {
 			
+			//Make element editable and draw chrome etc
+			$('[id][data-editable]').attr('contenteditable', 'true');
 		};
 	});
 	
@@ -57,18 +59,24 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 		
 		$(window).load(function() {
 	
-			//Add the toolbar (hidden), measure the height and add to the body
+			//Add the toolbar to the body
 			var $body = $('body');
 			$body.prepend(compose({div: {'class': 'gitpresse-toolbar gitpresse-invisible', a: {id: 'gitpresse-logo', href: '#'}}}));
 			
 			var $toolbar = $('.gitpresse-toolbar');
 			$('.gitpresse-toolbar').removeClass('gitpresse-invisible');
 		
-			//Boot the current branch (gh-pages)
-			gitpresse.editing.switchBranch('gh-pages', false);
-			
-			//Make element editable and draw chrome etc
-			$('[id][data-editable]').attr('contenteditable', 'true');
+
+			//Bind toolbar events
+			$toolbar.on('click', function() {
+				var $self = $(this);
+
+				if ($self.hasClass('editing')) return;
+
+				$self.addClass('editing');
+				$self.find('#gitpresse-logo').hide();
+				gitpresse.editing.switchBranch('gh-pages', false);	
+			})
 		});
 	});
 })();  
