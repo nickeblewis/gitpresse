@@ -75,9 +75,9 @@
 }
 
 [id][contenteditable]:hover  {
-	opacity:1.0 !important;
+	outline: dotted 3px #555;
 }
 
-body > * {
-	opacity:0.5;
+[id][contenteditable]:focus {
+	outline: dotted 3px #555;
 }
