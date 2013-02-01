@@ -61,21 +61,43 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 	
 			//Add the toolbar to the body
 			var $body = $('body');
-			$body.prepend(compose({div: {'class': 'gitpresse-toolbar gitpresse-invisible', a: {id: 'gitpresse-logo', href: '#'}}}));
+			$body.prepend(compose({a: {href: '#', 'class': 'gitpresse-toolbar gitpresse-invisible'}}));
 			
 			var $toolbar = $('.gitpresse-toolbar');
 			$('.gitpresse-toolbar').removeClass('gitpresse-invisible');
 		
-
 			//Bind toolbar events
-			$toolbar.on('click', function() {
+			$toolbar.on('click', function(e) {
 				var $self = $(this);
 
 				if ($self.hasClass('editing')) return;
 
 				$self.addClass('editing');
-				$self.find('#gitpresse-logo').hide();
 				gitpresse.editing.switchBranch('gh-pages', false);	
+
+				e.preventDefault();
+			})
+
+			//Toolbar button events
+			$toolbar.prepend(compose([{a: {href:'#', id: 'gitpresse-merge', 'class', ''}}, {a: {href:'#', id: 'gitpresse-reset', 'class', ''}}, {a: {href:'#', id: 'gitpresse-exit', 'class', ''}}]));
+			$toolbar.find('a').click(function(e) {
+				var $self = $(this);
+
+				//Merge
+				if (this.id === 'gitpresse-merge') {
+
+				}
+
+				//Reset
+				if (this.id === 'gitpresse-reset') {
+					
+				}
+
+				//Exit
+				if (this.id === 'gitpresse-exit') {
+					$toolbar.
+				}
+
 			})
 		});
 	});
