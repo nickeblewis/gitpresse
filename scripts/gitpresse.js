@@ -58,7 +58,8 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 		};
 
 		this.stop = function($toolbar) {
-
+			$toolbar.removeClass('editing');
+			$('[id][data-editable]').attr('contenteditable', 'false');
 		}
 	});
 	
