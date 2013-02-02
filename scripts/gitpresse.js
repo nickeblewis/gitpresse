@@ -51,6 +51,15 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 			//Make element editable and draw chrome etc
 			$('[id][data-editable]').attr('contenteditable', 'true');
 		};
+
+		this.start = function($toolbar) {
+			if ($toolbar.hasClass('editing')) return;
+			$toolbar.addClass('editing');
+		};
+
+		this.stop = function($toolbar) {
+
+		}
 	});
 	
 	
@@ -69,11 +78,7 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 			//Bind toolbar events
 			$toolbar.find('.gitp-init').on('click', function(e) {
 				
-				if ($toolbar.hasClass('editing')) return;
-				$toolbar.addClass('editing');
-
-				$(this).hide();
-
+				gitpresse.editing.start($toolbar);
 				gitpresse.editing.switchBranch('gh-pages', false);	
 
 				e.preventDefault();
@@ -101,7 +106,7 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 
 				//Exit
 				if (this.id === 'gitp-exit') {
-					$toolbar.removeClass('editing');
+					gitpresse.editing.stop($toolbar);
 				}
 
 			})
