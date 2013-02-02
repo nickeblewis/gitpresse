@@ -37,8 +37,7 @@
 	http://git.io/1TOgtg
 	email: jamesw@opencomponents.com;
  */
-.gitpresse-toolbar {
-	display:block;
+.gitp-toolbar {
 	position:fixed;
 	top:-1px;
 	right:20px;
@@ -46,33 +45,31 @@
 	-webkit-box-shadow: 0px 1px 2px 0px #666;
 	box-shadow: 0px 1px 2px 0px #666;
 	z-index:999999;
+}
+
+.gitp-toolbar .gitp-init {
+	display:block;
+	width:100px;
+	height:30px;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAUCAMAAAAHtrtKAAAAM1BMVEXw8PD////////////6+vr////////y8vL////////////29vb///////8AAADv7+////8KVhBRAAAAD3RSTlPuUI9ws0Bg26B/IMcwEADk3EIeAAABhElEQVR42q2U23IjIQxEGe6gC/r/r90GTLFx8uJU9NBDtdARYsZ2+h5dfxHfMcXxp5DwfMfYYE1WP6A06z9gksqwgOnczyy+uqIb/T9UbvzKeyMsyJomgZF1x9MEWo3k6LK8+YthZ5RXTTAz59HEpUhl4gJbVyGzgkJk/daXdTErGyR2jDM5mAbaSIpNnDhTLCkA06ymuvVYKR9MRzlyElCjzhgW9ggQaNaqMySj1jbp/PStx7ovvFoEqiqBxvPsUOPZFNAoXPoYkougtalulZd1MWJDpKAOT3QKCxwAtsTmZA0dfZUFaH3rsS4GrlQMwPNWoqXVal7uvIW8v42Ian5Gsa5Lj/XlNJnIAnDPLIaTzc9JRQk4RAZbGtp00z71WHIxsKo4ExWSmc4tReNEeW6IewcVH8UXjUWXHuvtN/Xc77+3LnYSwq9FwqJRHLz1WG8Ysg69UK8/RQ796I6LuYe54e35zR8FjyHXXNf8KYZFwtjDXgx9jJE6LPJX+2mfYv4k/gGbRESvw4R4hwAAAABJRU5ErkJggg==);
 	background-position: 15px 5px;
 	background-repeat: no-repeat;
 }
 
-.gitpresse-toolbar.editing {
-	background-color:#fd9120;
-	background-image:none;
-}
-
-.gitpresse-toolbar a {
+.gitp-toolbar .gitp-cmd, .gitp-toolbar.editing .gitp-init  {
 	display:none;
 }
 
-.gitpresse-toolbar.editing a {
+.gitp-toolbar.editing .gitp-cmd {
 	display:inline-block;
 }
 
-.gitpresse-invisible {
+.gitp-hidden {
 	visibility:hidden
 }
 
-
 /* Themable properties */
-.gitpresse-toolbar {
-	width:100px;
-	height:30px;
+.gitp-toolbar  .gitp-init {
 	background-color:#555;
 	border:solid 1px #333;
 	-webkit-border-bottom-right-radius: 5px;
@@ -81,12 +78,12 @@
 	border-bottom-left-radius: 5px;
 }
 
-.gitpresse-toolbar.editing {
+.gitp-toolbar.editing {
 	background-color:#fd9120;
 }
 
 [id][contenteditable]:hover {
-	outline: dotted 3px #fd9120;
+	outline: dotted 3px #555;
 }
 
 [id][contenteditable]:focus {

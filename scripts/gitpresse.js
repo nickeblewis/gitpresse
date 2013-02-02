@@ -61,13 +61,13 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 	
 			//Add the toolbar to the body
 			var $body = $('body');
-			$body.prepend(compose({a: {href: '#', 'class': 'gitpresse-toolbar gitpresse-invisible'}}));
+			$body.prepend(compose({div: { 'class': 'gitp-toolbar gitp-hidden', a: {href:'#', class:'gitp-init'}}}));
 			
-			var $toolbar = $('.gitpresse-toolbar');
-			$('.gitpresse-toolbar').removeClass('gitpresse-invisible');
+			var $toolbar = $('.gitp-toolbar');
+			$('.gitp-toolbar').removeClass('gitp-hidden');
 		
 			//Bind toolbar events
-			$toolbar.on('click', function(e) {
+			$toolbar.find('.gitp-init').on('click', function(e) {
 				var $self = $(this);
 
 				if ($self.hasClass('editing')) return;
@@ -80,26 +80,26 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 
 			//Toolbar button events
 			$toolbar.prepend(compose([
-				{a: {href:'#', id: 'gitpresse-merge', 'text': 'm'}}, 
-				{a: {href:'#', id: 'gitpresse-reset', 'text': 'r'}}, 
-				{a: {href:'#', id: 'gitpresse-exit', 'text': 'e'}}
+				{a: {href:'#', 'class': 'gitp-cmd', id: 'gitp-merge', 'text': 'm'}}, 
+				{a: {href:'#', 'class': 'gitp-cmd', id: 'gitp-reset', 'text': 'r'}}, 
+				{a: {href:'#', 'class': 'gitp-cmd', id: 'gitp-exit', 'text': 'e'}}
 			]));
 
-			$toolbar.find('a').click(function(e) {
+			$toolbar.find('.gitp-cmd').click(function(e) {
 				var $self = $(this);
 
 				//Merge
-				if (this.id === 'gitpresse-merge') {
+				if (this.id === 'gitp-merge') {
 
 				}
 
 				//Reset
-				if (this.id === 'gitpresse-reset') {
+				if (this.id === 'gitp-reset') {
 					
 				}
 
 				//Exit
-				if (this.id === 'gitpresse-exit') {
+				if (this.id === 'gitp-exit') {
 					$toolbar.removeClass('editing');
 				}
 
