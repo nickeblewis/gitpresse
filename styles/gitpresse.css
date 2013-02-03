@@ -64,6 +64,8 @@
 .gitp-toolbar.editing .gitp-cmd {
 	display:inline-block;
 	color:#fff;
+	font: normal 0.875em Cambria, Georgia, serif;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .gitp-hidden {
