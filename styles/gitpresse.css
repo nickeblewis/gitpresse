@@ -66,7 +66,8 @@
 	color:#fff;
 	font: normal 0.875em Cambria, Georgia, serif;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
-	margin:5px 5px 0 5px
+	margin:5px 5px 0 5px;
+	text-decoration: none;
 }
 
 .gitp-toolbar.editing .gitp-cmd i {
@@ -92,9 +93,9 @@
 }
 
 [id][contenteditable]:hover {
-	outline: dotted 3px #555;
+	outline: dotted 3px #fd9120;
 }
 
 [id][contenteditable]:focus {
-	outline: dotted 3px #fd9120;
+	outline: dotted 3px #555;
 }
