@@ -23,7 +23,7 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 
 
 /*
-* Gitpresse' 0.9 Alpha
+* Gitpresse 0.9 Alpha
 * 
 * Copyright (c) James Westgate 2013
 *
@@ -39,7 +39,7 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 	
 	//Check for jQuery
 	if (type(window.$, 'undefined')) { 
-		console.log('Gitpresse\' requires jQuery 1.9.0 or newer');
+		console.log('Gitpresse requires jQuery 1.9.0 or newer');
 		return;
 	}
 
