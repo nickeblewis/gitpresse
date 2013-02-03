@@ -66,7 +66,7 @@
 	color:#fff;
 	font: normal 0.875em Cambria, Georgia, serif;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
-	margin: 0 10px 0 10px;
+	margin:5px 5px 0 5px
 }
 
 .gitp-toolbar.editing .gitp-cmd i {
