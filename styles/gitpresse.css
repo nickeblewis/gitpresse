@@ -42,7 +42,6 @@
 	top:-1px;
 	right:20px;
 	min-height:30px;
-	padding:0 20px 0 20px;
 	background: transparent no-repeat;
 	-webkit-box-shadow: 0px 1px 2px 0px #666;
 	box-shadow: 0px 1px 2px 0px #666;
@@ -51,7 +50,7 @@
 
 .gitp-toolbar .gitp-init {
 	display:block;
-	width:60px;
+	width:100px;
 	height:30px;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAUCAYAAAAuoXvLAAADeElEQVR42u1Xz2tTQRDOP5BrTzl58ODBgxAIiCCCiBQRD/VQChZBUUlPwYoiKnrSWnqJB8Ef+KNUooWiqNhixSK2ttYaUylYrVqbarX+bGuMNe/5jX4Lw+p7Lz2J5A18bHZndnbftzOzm0gklFBC+Rfium4NsNX0Hce56/6Wc8qmB/gKLK40cm6TDBfEfEazBLgmXeCEsusHikCsEki5wmgokph3aPIk5SXwAhgFmoAq6O/RHj+dp8Bz/G5HOyK27GeAOXL9TUhW6w3CZpx2XWrdaTS7VeTeQP87fRRkDeVjM/c4T/+iLwF15eiD/Gty2mkwLx9rNgvpAw5jbJKLuPzo5cqpq6JtGM1HZWuIGVIE3EITpU8995WQxgP5JFEJZI0P+v5B2040i5RPQ7TLfSWC9PxuT/82QUPc2Hb2N9J4VNnsoE1GjWW54DJJQ3UqzTo9aWtIlRNcy7EUfX4gIQnMmWFkHmF0jguhtI+h/4V+GrnHnNqPKQN1rKF++pSff5ugAU5MqtAU52PKpppjGWte0S7S6KdJUIc13m+tY3x2kdiHnDcDXDepzt/dkg7ALH0cI9mSwqeALUALIzjBQ/bUw89FP/960/UmtFS9KZl0KpcgOQXWsU2GIG1L+2dWpFZzrQz7G1iPkoxqLylxnayd5dxTzEqhP/RB/u30Eulhrs6yUJ62Pi6IoBqGbIci6HwZEVSyiaSulz6OAqslLYG4+JYLghEwRVJb1ZPj17rQt/npg/xHrLx0mYt3eLt0so5ELYLkY1otgmRshQrpS4qgPmVbxfwWm3WqLnkRZNL0kTWe50Fd5dyVSpc0kUuCPPVB/u3IcP4WZ8zHWuACbxiRPMYvM2oGOCbE5jinWREk0g3sMbcI2gesN2fRvc+xSabnKrWvuLpNZe298jG0f43mOHXvgZPAQWBCRUg6QO/rP6JunGEa3VS3yxrWApFeEuWq69thDai3rvQx5rfZ3JzF+RPqox4+k9Zppvg20ZLnrZn2qB+PWQ999UH+9SYmuLlGa3M7WVNGAh6YspldQIMaa+Jicmusl7cUsM2aJ6/zpep33GeNfcAhuYmsy+UM1z/ACKktVx/kX0dQm2JvSggB3qpT3b+A17hER46vcJd+BnUt+1//ZrSwSBcY8gX+ZWhYoJ8Y3xWSPm/4npmuuD+zoYQSSrnyE1X+B0fxrIgMAAAAAElFTkSuQmCC);
 	background-position: 14px 5px;
@@ -67,6 +66,7 @@
 	color:#fff;
 	font: normal 0.875em Cambria, Georgia, serif;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+	margin: 0 0 0 10px;
 }
 
 .gitp-hidden {
