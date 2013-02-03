@@ -87,9 +87,9 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 
 			//Toolbar button events
 			$toolbar.prepend(compose([
-				{a: {href:'#', 'class': 'gitp-cmd', id: 'gitp-merge', 'text': 'm'}}, 
-				{a: {href:'#', 'class': 'gitp-cmd', id: 'gitp-reset', 'text': 'r'}}, 
-				{a: {href:'#', 'class': 'gitp-cmd', id: 'gitp-exit', 'text': 'e'}}
+				{a: {href:'#', 'class': 'gitp-cmd', id: 'gitp-merge', 'text': 'merge'}}, 
+				{a: {href:'#', 'class': 'gitp-cmd', id: 'gitp-reset', 'text': 'reset'}}, 
+				{a: {href:'#', 'class': 'gitp-cmd', id: 'gitp-exit', 'text': 'exit'}}
 			]));
 
 			$toolbar.find('.gitp-cmd').click(function(e) {
