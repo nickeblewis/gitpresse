@@ -43,8 +43,8 @@
 	right:20px;
 	min-height:30px;
 	background: transparent no-repeat;
-	-webkit-box-shadow: 0px 1px 2px 0px #666;
-	box-shadow: 0px 2px 3px 0px #666;
+	-webkit-box-shadow: 0px 1px 1px 0px #666;
+	box-shadow: 0px 1px 1px 0px #666;
 	z-index:999999;
 }
 
@@ -66,7 +66,7 @@
 	color:#fff;
 	font: normal 0.875em Cambria, Georgia, serif;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
-	margin:5px 5px 0 5px;
+	margin:6px 5px 0 5px;
 	text-decoration: none;
 }
 
