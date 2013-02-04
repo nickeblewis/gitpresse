@@ -48,20 +48,30 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 	 	
 	 	var page =  window.location.pathname.substring(1);
 
-	 	alert(page);
-
-
 		this.start = function($toolbar) {
 			if ($toolbar.hasClass('editing')) return;
 			$toolbar.addClass('editing');
 
 			//Make element editable and draw chrome etc
-			$('[id][data-editable]').attr('contenteditable', 'true');
+			$('[id][data-editable]').each(function() {
+				
+				//See if there is anything saved in localStorage
+				if (typeof localStorage[page+this.id] !== 'undefined')  {
+					$(this).html(localStorage[page+this.id]);
+				}
+
+				//Make editable
+				$(this).attr('contenteditable', 'true');
+			});
 		};
 
 		this.stop = function($toolbar) {
 			$toolbar.removeClass('editing');
-			$('[id][data-editable]').removeAttr('contenteditable');
+			$('[id][data-editable]').each(function() {
+
+				localStorage[page+this.id] = $(this).html();
+				$(this).removeAttr('contenteditable');
+			});
 		}
 	});
 	
