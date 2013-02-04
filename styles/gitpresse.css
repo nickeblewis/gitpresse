@@ -44,7 +44,7 @@
 	min-height:30px;
 	background: transparent no-repeat;
 	-webkit-box-shadow: 0px 1px 2px 0px #666;
-	box-shadow: 0px 1px 2px 0px #666;
+	box-shadow: 0px 2px 3px 0px #666;
 	z-index:999999;
 }
 
@@ -89,11 +89,11 @@
 }
 
 .gitp-toolbar.editing {
-	background-color:#fd9120;
+	background-color:#555;
 }
 
 [id][contenteditable]:hover {
-	outline: dotted 3px #fd9120;
+	outline: dotted 3px #555;
 }
 
 [id][contenteditable]:focus {
