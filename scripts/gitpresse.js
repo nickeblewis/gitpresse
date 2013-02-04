@@ -81,6 +81,16 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 				$(this).removeAttr('contenteditable');
 			});
 		}
+
+		this.reset = function() {
+
+			$('[id][data-editable]').each(function() {
+
+				//Remove localStorage and restore original markup
+				localStorage.removeItem(page+this.id);
+				$(this).html(this._markup);
+			});
+		}
 	});
 	
 	
@@ -121,7 +131,7 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 
 				//Reset
 				if (this.id === 'gitp-reset') {
-					
+					gitpresse.editing.reset();
 				}
 
 				//Exit
@@ -129,7 +139,8 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 					gitpresse.editing.stop($toolbar);
 				}
 
-			})
+			});
+
 		});
 	});
 })();  
