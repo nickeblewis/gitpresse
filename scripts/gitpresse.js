@@ -68,7 +68,9 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 		};
 
 		this.stop = function($toolbar) {
+			if (!$toolbar.hasClass('editing')) return;
 			$toolbar.removeClass('editing');
+
 			$('[id][data-editable]').each(function() {
 
 				//Save value to localStorage and restore original markup
