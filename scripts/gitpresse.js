@@ -57,6 +57,8 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 				
 				//See if there is anything saved in localStorage
 				if (typeof localStorage[page+this.id] !== 'undefined')  {
+					this._markup = $(this).html;
+
 					$(this).html(localStorage[page+this.id]);
 				}
 
@@ -69,7 +71,11 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 			$toolbar.removeClass('editing');
 			$('[id][data-editable]').each(function() {
 
+				//Save value to localStorage and restore original markup
 				localStorage[page+this.id] = $(this).html();
+				$(this).html(this._markup);
+
+				//Make non editable again
 				$(this).removeAttr('contenteditable');
 			});
 		}
