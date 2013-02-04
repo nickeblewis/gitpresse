@@ -45,16 +45,18 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 
 	//Public functions
 	namespace('gitpresse.editing', function() {
-	 
-		this.switchBranch = function(branch, reload) {
-			
-			//Make element editable and draw chrome etc
-			$('[id][data-editable]').attr('contenteditable', 'true');
-		};
+	 	
+	 	var page =  window.location.pathname.substring(1);
+
+	 	alert(page);
+
 
 		this.start = function($toolbar) {
 			if ($toolbar.hasClass('editing')) return;
 			$toolbar.addClass('editing');
+
+			//Make element editable and draw chrome etc
+			$('[id][data-editable]').attr('contenteditable', 'true');
 		};
 
 		this.stop = function($toolbar) {
