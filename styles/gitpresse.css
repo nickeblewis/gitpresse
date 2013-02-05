@@ -50,9 +50,9 @@
 
 .gitp-toolbar .gitp-init {
 	display:block;
-	width:100px;
-	height:30px;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAeCAYAAACPOlitAAAC2ElEQVR42u1Xy2oUURDND+QDhFlnkZ3BgCBu3Ki4kCAEF4oy4MKg4AOMikEXoi50J/iIokaIoAYjiuJCDfhA4gM1hATiIxqMMagkPqJOdNpz4mksm+5m7kbE1IHDvXOrq7rvuVXVPVVVDofD4XA4HA6H4y8giqL5Zt4LvgPr9PsReHW6CrMB/A5G5XJ5CEMBfIr5J4wLwWrNB6aTKEXwVSRAgHFlzTfMn4PDEmsB+IyX0AaOYP0JxlkYX2N8Aw7Sx8R6iGGmRB6VfVTmSbDdPMNI9Bv9YK1sF3S/2If3X12BLTNmqEAvwB/gIfCYMqifNmymzYiyGb+v047xA8Y74DVwBniSm9eDvAd3gKflN6A4gyYzl2gsgau0OfrtBg/qHhR9o3weKLu7FXONmGVblBUzVJxqcIynbtaSv/dKtFpj70uJ1S2hG8zaXa3VwWefNlDUJjgvYf22hD0nYbdi7fGvvU8dCCdXVOJzwC/gCqwdzrKxR2bFDBVovzYQKSsm4sDxNXoQClSjHjQe9yDZDhgx6F9jfE+ZU43vNVcHw6zbJr+4RGJ8he9HjC22ZAW2g0awPseWGTNUoB5t4AR4C7wPNqeIWEoTSNk0ZAQqWYG0NpV9isN+UUjEj7NstlnbqRLrMffixo/yWpaVSivVlhczVKBdUTp6JchaCVdWj2pUM2ZtN2nDXabEiHvKkiN64D7F6VKcVsYxz9CiDH6JYTm4iaWiDLokn+PMGHCPeglLryPHlhkzSCC9ZXiTdnAp+wPWzit4p17pNlXPKtti8JTWJwSKzFtsWG+5P+LwlBMH1ZFw/ay+cTnl8MbYc/JseTFDBXqrsrCp2KST78zJvAZwnS0XCTShb6dm2gOzeR643fphvlLZQNuWSm15MUNLrNU2MZMpFG1ZhTHqdXIxJvnG+p8+FBdjQ2cw3sR4Q72jEPipwNfpRZagYhT9D5vD4XA4HA7Hv4+fOcePhqLWE20AAAAASUVORK5CYII=);
+	min-width:100px;
+	min-height:30px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAeCAMAAAC45KifAAAAMFBMVEX////////7+/v////z8/P39/f////////////////////w8PD///8AAADu7u7///9bnTLlAAAADnRSTlNEZq0z18KIVRGZIux3AA/UWUsAAAHDSURBVHja7ZTbbuMwDEStu0hK5P//7c442MYJ8tI2BQrsCkhEK9LhDEXn2G8a/xYo6ZtAHmPvlb4N0gAoRYBU9HugtbdF3nsaQ45entyfz3O9BI0WrgwWDoZPfttOXbGCR3H+5EHLOei+eLSNqUWbF9CKEM7KEMMKZI2c3ahvpah7NyyDNyKYqGLqfDBfd1AP2Ki2p3sBySg2LK8jHIEPB0jCVBr2InadEWmJenSN4wM0yBn4SGC1sjYIfeFQI0Cm2YB19UHFS1FC9y2lwofUe40q7Rr0OtTqWSGEXAPTaHpqQ27rp1TQYLQy9NlNP0B4ViTOCALOSKC/eVb9oNETLPUkzCiceuam2uRyaws5O6/iVlM6oz9yF51wTwnHjWmBssiDFwh5+byxdFE0xJhYbk10nOe2whS55abIsJrV7fCBjbIqFQAi416j5ilHZ4cotACUesh0Yy6x/Vd2lp1dR2hBhsrK1dpreWjI6UxcjCEEq8Ho01A2p4taBVT7bcNaT529Il8PsX9ejuUsy6we6fW7ZnGGd2772tvfHwSxWOtLoMSmuY4a+mnQ2lPCy+N6s/1p0GCHPecf/Rf9+f8H/RToD98OZvVon1iNAAAAAElFTkSuQmCC);
 	background-position: 14px 0;
 	background-repeat: no-repeat;
 }
@@ -78,7 +78,11 @@
 	visibility:hidden
 }
 
-/* Themable properties */
+
+/*! 
+ *	Themable properties 
+ */
+
 .gitp-toolbar  {
 	background-color:#555;
 	border:solid 1px #333;
