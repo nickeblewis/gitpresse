@@ -37,11 +37,19 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 	//Extend the window namespace with the default Extendify methods 
 	extend(window);
 	
-	//Check for jQuery
-	if (type(window.$, 'undefined')) { 
-		console.log('Gitpresse requires jQuery 1.9.0 or newer');
-		return;
+	//Feature and library detects against the window object
+	var detects = {
+		'localStorage': 'Gitpresse requires a browser that supports localStorage',
+		'$': 'Gitpresse requires jQuery 1.9.0 or newer'
 	}
+
+	for (var prop in detects) {
+		if (typeof window[prop] === 'undefined') {
+			console.log(detects[prop]);
+			return;
+		}
+	}
+	
 
 	//Public functions
 	namespace('gitpresse.editing', function() {
@@ -97,6 +105,7 @@ k=1,s=q.length;k<=s;k++)for(var r=q[k-1],l=0,t=r.length;l<t;l+=k)h[r.substring(l
 	//Startup - modify the dom with the editing tools
 	$(document).ready(function() {
 		
+		//Attahc to window.load so that the page builds completely first
 		$(window).load(function() {
 	
 			//Add the toolbar to the body
